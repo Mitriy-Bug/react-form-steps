@@ -1,0 +1,60 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.trainingContainer {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.trainingBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.trainingForm-text {
+  display: flex;
+  justify-content: space-around;
+}
+
+.trainingForm {
+  justify-content: space-around;
+  display: flex;
+}
+
+.traningDate {
+  display: flex;
+  flex-direction: column;
+}
+
+.trainingHistory {
+  display: flex;
+  flex-direction: column;
+ 
+  justify-content: space-around;
+}
+
+.historiText {
+  display: flex;
+  justify-content: space-around;
+}
+
+.historiItems {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.historyDelet {
+  cursor: pointer;
+}
+
+
+
