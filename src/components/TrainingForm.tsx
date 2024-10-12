@@ -13,7 +13,7 @@ export function TrainingForm({submit, input1, input2}: TrainingFormProps) {
                     <input type="date" name="date" onChange={input1}></input>
                 </label>
                 <label className="traningDate"> Пройдено, км
-                    <input name="dist" onChange={input2}></input>
+                    <input type="number" name="dist" onChange={input2}></input>
                 </label>
                 <button className="btn">ОК</button>
             </form>                      

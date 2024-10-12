@@ -1,29 +1,29 @@
 
-import {isValidElement, useState} from 'react';
+import {useState} from 'react';
 import { nanoid } from 'nanoid';
 import {TrainingForm} from './TrainingForm';
 import {TrainingBlock} from "./TrainingBlock";
 
 export function TrainingContainer() {
-    let [value1, setValue1] = useState(''); //состояние ввода даты
-    let [value2, setValue2] = useState(''); //состояние ввода дистанции
+    const [value1, setValue1] = useState(''); //состояние ввода даты
+    const [value2, setValue2] = useState(''); //состояние ввода дистанции
 
-    const [result, setResult]: any = useState([]); //состояние ввода нажатия кнопки OK
+    const [result, setResult] = useState([]); //состояние ввода нажатия кнопки OK
 
-    let handCange1 = ({target}: React.ChangeEvent<HTMLInputElement>) => {   
+    const handCange1 = ({target}: React.ChangeEvent<HTMLInputElement>) => {
        setValue1(target.value);              
     }
 
-    let handCange2 = ({target}: React.ChangeEvent<HTMLInputElement>) => {        
+    const handCange2 = ({target}: React.ChangeEvent<HTMLInputElement>) => {
         setValue2(target.value);              
      }
 
-    let handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {    
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (value1 === '' || value2 === '') return false;
 
-        let add  = {id: nanoid(), date: value1, dist: Number(value2)};
+        const add  = {id: nanoid(), date: value1, dist: Number(value2)};
 
         const findEl = result.find((el: any) => el.date === value1);
 
@@ -34,9 +34,9 @@ export function TrainingContainer() {
         } else {  
             setResult([...result, add]);
         }
-        setValue1(value1 = '');
-        setValue2(value2 = '');
-        e.target.reset();
+        // setValue1(value1 = '');
+        // setValue2(value2 = '');
+        // e.target.reset();
     }
 
     //удаление родительского элемента кнопки крестик
